@@ -5,20 +5,24 @@ require_once 'loginheader.php';
 $page_title = '管理頁面';
 
 $op = isset($_REQUEST['op']) ? filter_var($_REQUEST['op']) : '';
-$sn = isset($_REQUEST['sn']) ? (int)$_REQUEST['sn'] :0;
+$sn = isset($_REQUEST['sn']) ? (int) $_REQUEST['sn'] : 0;
 switch ($op) {
     case 'insert':
         $sn = insert_article();
         header("location: index.php?sn={$sn}");
         exit;
-     case 'delete_article':
+    case 'delete_article':
         delete_article($sn);
         header("location: index.php");
         exit;
     case "article_form":
         break;
-        case "article_form":
-             show_article($sn);
+    case "article_form":
+        show_article();
+        break;
+    case "modify_article_form":
+        show_article($sn);
+        
         break;
 
     default:
@@ -41,7 +45,7 @@ function insert_article()
     $db->query($sql) or die($db->error);
     $sn = $db->insert_id;
 
-    if(isset($_FILES)){
+    if (isset($_FILES)) {
         require_once 'class.upload.php';
         $foo = new Upload($_FILES['pic']);
         if ($foo->uploaded) {
@@ -62,8 +66,6 @@ function insert_article()
             }
         }
 
-
-
         // $ext = pathinfo($_FILES['pic']['name'], PATHINFO_EXTENSION);//判斷圖檔副檔名
         // if (!is_dir('uploads')) {
         //     mkdir('uploads');
@@ -74,14 +76,12 @@ function insert_article()
     return $sn;
 }
 
-function delete_article($sn){
+function delete_article($sn)
+{
 
-global $db;
-   
-    $sql      = "DELETE FROM `article` WHERE sn='{$sn}' and username='{$_SESSION['username']}'";
+    global $db;
+
+    $sql = "DELETE FROM `article` WHERE sn='{$sn}' and username='{$_SESSION['username']}'";
     $db->query($sql) or die($db->error);
-
-
-
 
 }

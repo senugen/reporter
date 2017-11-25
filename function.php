@@ -14,9 +14,9 @@ function link_db()
 function show_article($sn)
 {
     global $db, $smarty;
-  
-$config = HTMLPurifier_Config::createDefault();
-$purifier = new HTMLPurifier($config);
+  require_once 'HTMLPurifier/HTMLPurifier.auto.php';
+    $config = HTMLPurifier_Config::createDefault();
+    $purifier = new HTMLPurifier($config);
 
 
  
@@ -25,4 +25,5 @@ $purifier = new HTMLPurifier($config);
     $data   = $result->fetch_assoc();
     $data['content'] = $purifier->purify($data['content']);
     $smarty->assign('article', $data);
+
 }
