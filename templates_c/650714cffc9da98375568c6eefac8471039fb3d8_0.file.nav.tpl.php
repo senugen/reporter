@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-18 16:01:10
+/* Smarty version 3.1.30, created on 2017-11-25 16:34:12
   from "D:\UniServerZ\www\reporter\templates\nav.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a0fe8c653d714_14022745',
+  'unifunc' => 'content_5a192b04c59dc9_80320641',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '650714cffc9da98375568c6eefac8471039fb3d8' => 
     array (
       0 => 'D:\\UniServerZ\\www\\reporter\\templates\\nav.tpl',
-      1 => 1510992041,
+      1 => 1511598846,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a0fe8c653d714_14022745 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a192b04c59dc9_80320641 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top py-0 ">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top py-0 mb-5">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menu">
         <span class="navbar-toggler-icon"></span>
     </button>

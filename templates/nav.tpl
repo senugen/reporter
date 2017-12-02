@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top py-0 ">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top py-0 mb-5">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menu">
         <span class="navbar-toggler-icon"></span>
     </button>

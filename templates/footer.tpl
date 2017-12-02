@@ -13,15 +13,13 @@
 
 
 
-<script src="js/jquery-3.2.1.min.js ">
 
-</script>
 <script src="js/popper.min.js "></script>
 <script src="js/bootstrap.min.js "></script>
 <script>
     $(document).ready(function () {
-        // var images = ['pic1.jpg', 'pic2.jpg'];
-        var images = { $photo_list }
+        var images = ['pic1.jpg', 'pic2.jpg'];
+        // var images = { $photo_list }
         $('.img_container').css({ 'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')' });
 
         // var txt = ['大家好', '歡迎光臨'];

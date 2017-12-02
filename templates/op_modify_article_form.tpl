@@ -1,8 +1,8 @@
-<form action="admin.php" method="POST" enctype="multipart/form-data">
+<form action="admin.php" method="POST" enctype="multipart/form-data" class="my-5">
 
-    <label for="title" class=" col-form-label sr-only" value="{$article.title}">文章標題</label>
+    <label for="title" class=" col-form-label ">文章標題</label>
 
-    <input type="text" class="form-control" name="title" id="title" placeholder="文章標題">
+    <input type="text" class="form-control" name="title" id="title" placeholder="文章標題" value="{$article.title}">
     <label for="content" class=" col-form-label sr-only">文章內容</label>
     <textarea name="content" id="content" class="form-control" rows="10" placeholder="文章內容">{$article.content}</textarea>
 
